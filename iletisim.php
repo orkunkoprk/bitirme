@@ -43,7 +43,7 @@
             </ul>
           </div>
           
-          <li><a href="iletisimler.html" style="color: rgb(0, 0, 0);   border: 0;
+          <li><a href="iletisim.php" style="color: rgb(0, 0, 0);   border: 0;
             border-radius: 20px;
             padding: 10px 18px;
             background-color: rgb(218, 224, 192); ">İletişimler</a></li>
@@ -55,7 +55,11 @@
     </div>
   </div>
   <div class="container" style="width: 600px;">  
-    <form id="contact" action="" method="post">
+    <form id="contact" action="iletisim-post.php" method="post">
+    <?php if(isset($_GET['success'])): ?>
+            <div class="alert alert-success">Mesajınız başarıyla iletilmiştir. </div>
+
+    <?php endif ?>
       <h3>Hemen Bize Ulaşın</h3>
       <h4>Lütfen bilgilerinizi eksiksiz ve doğru giriniz!</h4>
       <fieldset>
@@ -75,7 +79,9 @@
       <fieldset>
         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Gönder</button>
       </fieldset>
+      
     </form>
+    
    
     
   </div>
@@ -98,8 +104,6 @@
     
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-    crossorigin="anonymous" src="./js/iletisimler.js"> </script>
+    
 </body>
 </html>
